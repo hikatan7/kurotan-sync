@@ -38,3 +38,5 @@ RATS vs VATS郭清比較(VATS側のLN数がない)、予後の単施設証明(EG
 **論文Bの最も近い競合が判明**: Okusanya O 2026, Ann Thorac Surg「Clinical Outcomes in NSCLC Among Sustained Adopters of Robotic Thoracic Surgery」(NCDB 2010-2021、24,909例、PMID 41544923)。ロボット定着施設で区域切除の採用増と郭清LN数増を示す。**Geminiは初回に挙げず、Claudeの独自検索で発見**。施設レベルの解析なので「患者レベルでcT層別に実証」という新規性は残るが、Discussionで必ず対峙すること。論文Cには ROMAR 2026 (Respirology, DOI 10.1002/resp.70191、留置と切除を同一麻酔下で実施) が対比相手として要る＝自験の「別日運用・接続26/26」と直接ぶつかる。RATS区域切除×RFIDの報告は当方の検索でも見つからず、「該当なし」は支持できる。
 
 **既存メモとの不一致**: 「Patel 2025 Cancers」がnecessity→feasibilityを提起という記載があるが、その表現の初出は Cancers 2025「Evolving Resection Strategies for NSCLC」(DOI 10.3390/cancers17213437)。Geminiが挙げた Patel YN 2021 Ann Thorac Surg (#22) とは別物の可能性。投稿前に突合すること。
+
+**論文B・C用の残り22件も照合済み（2026-10-11）**：正しい2件、PMID・書誌・著者違い13件（正しい書誌を特定）、見つからず7件（Linsky 2018・Patel 2021・Boffa 2017・Kneuertz 2020・Ichinose 2016・Sawabata 2002・Suzuki 2019）。一覧は `教育ファイル集\検索作業まとめ_20261011.xlsx` の「RATS台帳B・C」。
