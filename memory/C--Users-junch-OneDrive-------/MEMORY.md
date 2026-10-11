@@ -1,0 +1,88 @@
+# Memory Index
+
+- [呼び方（Junko／くろたん）](user-preferred-names.md) — ユーザーは Junko、Claude の自称は「くろたん」
+- [医療AI活用ユーザー](user-medical-ai-workflows.md) — 医療従事者・複数AIで資料作成、統一マスタープロンプト作成済み
+- [グロービスMBA教材の集約先](project-globis-mba-folder.md) — デスクトップ「経営学」に集約済み。Vimeo講義動画リストも保存済み(字幕焼付でCC抽出不可)
+- [ロボット手術資料の集約先](project-robot-folder.md) — デスクトップ「ロボット」に47件集約済み(2026-07-26再集約・移動)、重複15件は_重複レビューへ
+- [移植資料の集約先](project-transplant-folder.md) — デスクトップ「移植」に6件集約済み(2026-07-04)
+- [院内配布文書テンプレート](project-hospital-doc-template.md) — Word版「静岡病院ロゴ入テンプレート_案B.dotx」+ PPTX版(2026-07-04)、CE用A0縦ポスターテンプレート(2026-09-02)
+- [財務分析シート](project-financial-analysis-sheet.md) — デスクトップ「財務分析シート.xlsx」PL/BS/CF入力→約25指標自動計算(2026-07-10)
+- [決算書PDF解析プロトコル](workflow-financial-pdf-protocol.md) — PDF添付+「財務分析して」で発動: 数値抽出→シート複製に転記→バランスチェックOK確認→所見報告
+- [Chrome検索2モード運用](workflow-chrome-search-two-modes.md) — ①簡易検索=毎回ハイパーリンク出典入りWordを指定ページ数(A4 n枚)で作成 ②AI横断検索=Gemini→Perplexity→Copilot→ChatGPT順で完全回収→Word/メモに詳細まとめ(Gemini以外は拡張の制限で操作不可、ユーザーがコピペ担当)
+- [AI横断検索プロンプト](workflow-cross-site-search.md) — 文献・画像を多サイト一括収集させる汎用テンプレ。モデル非依存、URL捏造禁止・2巡目追撃つき
+- [マスタープロンプト](workflow-master-prompt.md) — 「マスタープロンプトで:【テーマ】」と来たら学習資料用の網羅回答(10要件)を適用。モデル問わず有効、Geminiにも登録済み
+- [ページ数ちょうどのWord資料](workflow-docx-exact-page-count.md) — 版面を先に詰める→maxYで溢れ特定。空白ページはadd_page_breakが原因
+- [Office生成環境](env-word-com-doc-generation.md) — Python3.12+openpyxl使用可(2026-07-17〜)、LibreOffice無し→再計算はExcel COM。WordはPowerShell+Word COM(ps1はUTF-8 BOM必須)
+- [レセプトデータ作る君 最終版](project-receipt-tool-workbook.md) — 医科歯科全マスター内蔵(36MB)。OCR貼付→自動抽出+検算3チェック+背反・包括・算定回数点検。PQなしでopenpyxl編集可
+- [総額明細・明細作成シート](project-receipt-tool-meisai-sheet.md) — DPC包括+出来高を区分別集計し総額(円)まで表示。ページ重複除去・内訳検証つき(2026-07-28)
+- [デスクトップ整理体系](project-desktop-folder-layout.md) — 直下ファイル0を維持。13フォルダの振り分け先一覧(2026-07-29整理)
+- [OneDrive同期下のファイル操作注意](env-onedrive-desktop-file-ops.md) — デスクトップはOneDrive同期。移動は直前フォルダ保証+列挙オブジェクト経由+ハッシュ照合。重複退避先は「_重複レビュー」
+- [患者データ匿名化ツール](project-anonymizer-tool.md) — 自作ファイル集\匿名化ツール。オフラインxlsm。患者IDは連番仮名化(患者00001)、他はマスク。40,072行=7.2秒(2026-08-12)
+- [オカレンスは報告増を肯定評価](feedback-occurrence-report-positive-framing.md) — 件数増＝ヒアリング/報告文化の定着。指標は「100手術あたり報告件数」
+- [月次オカレンスレポートの作り方](workflow-occurrence-monthly-report.md) — 毎月「詳細版6頁」＋「会議用2ページサマリ」の2点セット。サマリは手術件数・総数・グラフ・GoodCatch必須
+- [オカレンス統合分析ツール](project-occurrence-tool.md) — デスクトップ「オカレンス統合ツール」に完成・実データテスト済(2026-07-18)。VBAでVBScript.RegExp使用禁止などCOM自動化の教訓あり
+- [手術室経営分析の基盤](project-or-management-analysis.md) — デスクトップ「手術室経営分析」に22シートのデータセット＋12種グラフ。定時=平日8:30-17:15、ロボット判定は「ﾛﾎﾞｯﾄ/ロボット/支援機器」の3語必須
+- [手術実績分析ツール](project-surgery-analysis-tool.md) — デスクトップ「手術件数推移」の手術分析ツール.xlsm、⑨定義シートで分析追加可能(2026-07-19)
+- [医事課月次推移分析ツール](project-iji-monthly-tool.md) — デスクトップ「医事課_月次推移分析.xlsx」ヒト系/カネ系ダッシュボード。医事課報告別冊PDFを毎月追記で自動更新(2026-07-20)
+- [病院経営学 統合デッキ](project-hospital-mgmt-deck.md) — 統合最終版18枚pptx完成(2026-07-22)、改訂時はpython-pptx+PowerPoint COM QA
+- [ファイル統合集約ワークフロー](workflow-file-consolidation.md) — 重複テーマ複数ファイル→PPT/Word統合(深堀+参考文献)→元ファイルは「統合済_」リネーム＋「_統合済み元資料」へ退避(両方)
+- [ファイナンステキスト完成版](project-finance-textbook.md) — 全15章399頁のdocx+PDF完成(2026-07-23)、第14・15章と巻末はClaude新規執筆
+- [手術室経営×診療報酬 統合詳説](project-or-reimbursement-integrated-doc.md) — 6資料統合の32頁docx＋37枚pptx完成(2026-07-23)、元ファイルは_統合済み元資料へ退避、類似資料は診療報酬関連資料へ集約
+- [医学系一次資料の統合](project-teaching-file-folder.md) — Teaching fileと学習ファイル\医学を2026-09-09に教育ファイル集へ全統合（一次資料225件）
+- [急性期・手術室・ICU 経営診断レポート](project-or-consult-diagnosis.md) — コンサル視点の辛口診断15頁docx完成(2026-07-23)、削減優先順位6段階・診療科4象限仕分け
+- [ファイル整理ツール](project-file-organizer-tool.md) — デスクトップのGUIアプリ。重複検出＋条件抽出→移動(取消可)/ごみ箱(2026-07-26)
+- [ファイル保護ツール](project-file-protect-tool.md) — デスクトップのGUIアプリ。誤削除防止(ACL)＋フォルダアイコン色分け。Windows ACLの落とし穴メモつき(2026-07-26)
+- [AKI利尿薬 教材一式](project-aki-diuretics-teaching.md) — デスクトップ「AKI利尿薬」に教科書57頁docx＋スライド59枚pptx＋PDF(2026-07-24)、KDIGO2026は草案反映
+- [SGB教材一式](project-sgb-teaching-set.md) — 08_麻酔に教科書45頁＋要点ガイド8頁＋スライド6枚(2026-07-30)。元PDFの文献誤り4点を付録Dに記録
+- [令和8年度改定のロボット加算](reference-r8-robot-surgery-addon.md) — 内視鏡手術用支援機器加算15,000点、2026/06/01施行。年200例基準は全科284件で充足済み
+- [令和8年度改定の麻酔・鎮静ルール](reference-r8-anesthesia-sedation-rules.md) — 新L001/L007/L008の3軸再編＋プレセデックス統一事例106。20分以上・非深鎮静は算定区分なし
+- [AKD期管理とCRRT意思決定 教材一式](project-akd-crrt-teaching-set.md) — 05_集中治療に専門家向け38頁＋専攻医看護師向け5頁。原案の医学的事実8点を修正して収録
+- [麻酔薬理ハンドブック](project-anesthesia-pharm-handbook.md) — 専攻医向け全15章100頁docx+PDF+図版26点。08_麻酔・気道管理内
+- [第9回SACMA研究会 資料一式](project-sacma-9th.md) — 座席配置表15枚＋名札39枚＋グループ表。午後は全6ブース各6名、④IABP14時のみ確定枠12名
+- [ドゥブランシュ売却案件](project-doublanche-sale.md) — 京都・一棟収益物件の売却。健美家一括査定で13社超と交渉中、売出14,980万円/一般媒介。台帳はデスクトップ「不動産金融」
+- [麻酔中の輸液管理テキスト](project-fluid-management-textbook.md) — ①ベーシック82頁＋②アドバンス55頁に再編(2026-08-14、旧2冊はごみ箱)。docx→IR逆変換の落とし穴つき
+- [CVC・PAC統合教材3点](project-cvc-pac-teaching-set.md) — 02_血管アクセスに専門医版87頁＋研修医版31頁＋スライド58枚。引用元10件は「引用済みファイル」へ退避
+- [血液製剤とアルブミン教科書](project-blood-products-textbook.md) — 00_ミニ教科書シリーズに移動。102頁。病態生理コラム20＋歴史コラム12。主題は「袋の中身≠体内で起きること」。専攻医向けミニテキスト（2026-08-31、13頁版まで増補。cell-based model＋大量出血の凝固管理、自作図版3点）も同ファイルに記載
+- [スライド生成基盤 pptxlib](project-pptxlib-slide-engine.md) — 高密度スライドの自作ビルダー。積み上げカーソル・行高係数・目視QA必須の3教訓
+- [術中の自己血輸血テキスト](project-autologous-transfusion-textbook.md) — ミニ教科書⑨82頁完成。ANH保存＝採血日24時まで、K920「5」は返血200mLごと1,000点等の一次資料メモ
+- [教育ファイル集（麻酔教材の集約先）](project-education-file-collection.md) — デスクトップ「教育ファイル集」に麻酔・周術期教材270件を全集約(2026-08-21)。経営事務系は対象外
+- [ミニ教科書⑱〜㉑（呼吸・循環・心停止・凝固）](project-minitextbook-18to21.md) — 2026-09-09に4巻新規作成、総目次も21巻へ更新
+- [麻酔科ミニ教科書シリーズ](project-anesthesia-minitextbook-series.md) — 教育ファイル集内「麻酔科ミニ教科書シリーズ」に全11巻集約(2026-08-21移動)。表紙は巻番号＋作成日＋「静岡市立静岡病院 麻酔科 玉里順子」
+- [気道管理 教科書⑬](project-airway-management-textbook.md) — 75頁。確認できない出典は付録E-2に明記して本文から除外
+- [図版の文字はみ出しを防ぐ](workflow-figure-text-fit.md) — figlibで幅を実測してから枠を決める。既刊44点を作り直した手順つき
+- [略語を初出で展開する](workflow-abbreviation-expansion.md) — 全13巻に巻頭一覧＋章ごとの初出展開。二重括弧・文献行・巻別の別義に注意
+- [ミニ教科書シリーズ スライド版](project-minitextbook-slides.md) — 全10テーマ×2種=20本を教育ファイル集\麻酔科ミニ教科書シリーズ\_スライド版へ配置。②のみ用語解説つき
+- [術前評価と麻酔計画 教科書](project-preop-assessment-textbook.md) — シリーズ⑪。docx104頁+PDF76頁+図版26点(2026-08-20)
+- [声門上器具スライド](project-sga-airway-slides.md) — 研修医用9テーマ目。原典の写真を引用＋自動生成フロー図2枚を描き直し(2026-08-21)
+- [周術期のはじめかた（研修医読本50頁）](project-perioperative-reader-50p.md) — 19テーマを8章×6頁に統合したPDF。HTML→Chrome print-to-pdfで頁数確定
+- [血管確保の実際（10頁テキスト）](project-vascular-access-text.md) — ミニ教科書⑭の元資料。提供図版4点の出典表記が未確定のため⑭では不採用
+- [血管確保 教科書⑭](project-vascular-access-textbook.md) — 65頁・全19章。図版20点は全て新規作図。図版検査は2段構えで0件まで通す
+- [手術体位と末梢神経障害 教科書⑮](project-positioning-nerve-textbook.md) — 64頁・全21章。頻度は「何を数えたか」で70倍違う
+- [アナフィラキシーと局所麻酔薬中毒 教科書⑯](project-anaphylaxis-last-textbook.md) — 61頁。2022年の院内講義が骨格。用量は意図的に書かない
+- [周術期アナフィラキシー統合ガイド](project-periop-anaphylaxis-guide.md) — 5資料統合127頁＋専門医版20枚。教育ファイル集へ集約済。pptxlib書き直しの要点つき
+- [区域麻酔と脊髄幹麻酔 教科書⑰](project-regional-neuraxial-textbook.md) — 60頁・全19章。他施設資料は退避せず残置
+- [周術期VPC/VTの4頁テキスト](project-perioperative-va-text.md) — 教育ファイル集に配置。GIK削除・リドカイン格下げ・ランジオロール前面などの記載方針つき
+- [プロンプト集（目的別）](workflow-textbook-master-prompt.md) — 自作ファイル集\プロンプト集に00早見表〜10教科書フルコース。目的別ファイル＋AI別差し替え方式
+- [麻酔科 資料ポータル（教育＋手術室経営）](project-anesthesia-material-portal.md) — 教育ファイル集\麻酔資料ポータル.html。184資料を分野→対象者→テーマのボタンで絞込、専用ランチャーで実ファイルを開く
+- [RATS臨床研究の企画](project-rats-research-plan.md) — 182例の単施設研究。論文11本の3年計画、中核はRFID併用のpTis/pT1mi 54%vs6%
+- [リンク入り資料はExcelで作る](feedback-links-must-be-excel.md) — .mdはメモ帳でリンクが飛べない。ハイパーリンク付きxlsxで納品
+- [高齢者RATS肺葉切除 原稿](project-elderly-rats-lobectomy-paper.md) — 116例解析済み。年齢ではなく累積症例数が全アウトカムを規定
+- [区域切除シフト論文](project-segmentectomy-shift-paper.md) — cT層別42%→76%。交互作用p=0.38は有意にならない点に注意
+- [RFID併用ロボット区域切除 論文](project-rfid-robotic-segmentectomy-paper.md) — pTis/pT1mi 53.8%vs6.2%。断端距離は空枠で提示
+- [NSCLC総説4本](project-nsclc-review-papers.md) — 検体基盤／律速の移動／OR時間分類学／最小構成プログラム。4モデル横断抽出も統合
+- [静岡県ロボット手術ダッシュボード](project-shizuoka-robot-dashboard.md) — Claude自作HTML。実写真12枚埋込＋学会プロクター名簿が決定打、自院はロボット比率27.1%で最高
+- [Copilotへの指示は「発注書」で出す](feedback-copilot-instruction-training.md) — 原文が届かず記憶もしない。3手ルールと診断表で特訓（プロンプト集⑬）
+- [Gemini/ChatGPT/Copilotの文献検索の限界値](reference-gemini-search-limits.md) — 3者に直接確認。一致点のみ信用。Copilotは文献検索に最も不向き
+- [他AIのURL・数値は捏造前提で検証](feedback-verify-ai-supplied-urls.md) — Gemini提示の画像URL12本が全て実在せず。Commons API・curl・Nominatimで裏取りする
+- [CSFD症例報告の口演7分](project-csfd-oral-presentation.md) — デスクトップ「CSFD口演2026」に追加レビューdocx＋再構成14枚＋スライド作法の講義17枚(2026-08-27)
+- [BISモニター教科書⑫](project-bis-monitor-textbook.md) — 54頁＋スライド15枚/6枚。流布している数値8点を一次文献で検証・修正（付録C）
+- [学会発表の講義スライド](project-conference-presentation-lecture.md) — 教育ファイル集。一般版32枚(倫理・死亡例・国内外の違い入り)が最新、旧38枚版は置換済み
+- [他院財務諸表の蓄積先](project-hospital-financial-statements-folder.md) — 病院経営学\財務諸表 に病院別フォルダ。富山大学病院5期分析を2026-08-29追加
+- [文字化けPDFの復号](env-pdf-cid-decode.md) — 国立大学法人PDFはCID埋込。グリフ輪郭照合で復号、スクリプトは自作ファイル集\PDF文字化け復号
+- [2026年JSCVAの演題レビュー2件](project-jscva2026-abstracts.md) — 教育ファイル集JSCVA2026に統合。村中(CSFD)・押坂(巨大冠動脈瘤とTEE)＋Perplexity検索プロンプト
+- [肺がん手術の致死的出血 頻度スライド](project-lung-fatal-bleeding-deck.md) — 13枚。分母で4層に分け、一次文献の実数から算出。肺切除限定のIOCA率は未報告
+- [宗教的輸血拒否（エホバの証人）](project-jw-transfusion-refusal.md) — 教育ファイル集に統合資料40頁＋専門医版20枚＋原典4点。2008年GLは未改訂、実践ガイド令和8年2月と共同親権2026年4月が新論点
+- [デスクトップをローカル化](env-desktop-localized.md) — 2026-09-10にOneDriveから切離。実体は C:\Users\junch\Desktop。教育/自作ファイル集もデスクトップに戻し、OneDrive側はクラウドのみの控え。旧フォルダは `OneDrive\_旧デスクトップ` へ改名
+- [フォルダのロック犯人を特定する](env-windows-folder-lock-holders.md) — 「別のプロセスで使用中」の犯人はClaude Code自身のシェルとexplorer。ハンドル列挙で特定し、Bash側から落とす
+- [OneDriveのUIは自動クリック不可](env-onedrive-ui-blocks-automation.md) — クリックは無反応、Tab+Spaceなら通る。Enterは既定ボタンに当たるので禁止
+- [デスクトップのパス変更(2026-09-12)](desktop-path-change-2026-09-12.md) — 実体は OneDrive\_旧デスクトップ。記憶内の「デスクトップ」は全てこれを指す

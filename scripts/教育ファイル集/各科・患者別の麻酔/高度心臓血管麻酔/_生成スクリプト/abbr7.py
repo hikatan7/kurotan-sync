@@ -1,0 +1,40 @@
+# -*- coding: utf-8 -*-
+"""第Ⅶ章 巻頭の略語一覧"""
+
+ABBREV = (
+    ["略語", "英語", "日本語"],
+    [["ACT", "activated clotting time", "活性化凝固時間"],
+     ["AKI", "acute kidney injury", "急性腎障害"],
+     ["ASE", "American Society of Echocardiography", "米国心エコー図学会"],
+     ["CI", "confidence interval", "信頼区間"],
+     ["CPB", "cardiopulmonary bypass", "人工心肺・体外循環"],
+     ["EACTAIC",
+      "European Association of Cardiothoracic Anaesthesiology and "
+      "Intensive Care", "欧州心臓胸部麻酔集中治療学会"],
+     ["EACTS", "European Association for Cardio-Thoracic Surgery",
+      "欧州心臓胸部外科学会"],
+     ["EBCP", "European Board of Cardiovascular Perfusion",
+      "欧州心血管灌流委員会"],
+     ["ECMO", "extracorporeal membrane oxygenation", "体外式膜型人工肺"],
+     ["ERAS", "enhanced recovery after surgery", "術後回復力強化"],
+     ["FFP", "fresh frozen plasma", "新鮮凍結血漿"],
+     ["Hb", "hemoglobin", "ヘモグロビン"],
+     ["HIT", "heparin-induced thrombocytopenia",
+      "ヘパリン起因性血小板減少症"],
+     ["IABP", "intra-aortic balloon pump", "大動脈内バルーンパンピング"],
+     ["KDIGO", "Kidney Disease: Improving Global Outcomes",
+      "国際腎臓病予後改善機構"],
+     ["MAP", "mean arterial pressure", "平均動脈圧"],
+     ["OR", "odds ratio", "オッズ比"],
+     ["PBM", "patient blood management", "患者血液管理"],
+     ["ROTEM", "rotational thromboelastometry",
+      "ローテーショナルトロンボエラストメトリー"],
+     ["RR", "risk ratio", "リスク比"],
+     ["SCA", "Society of Cardiovascular Anesthesiologists",
+      "米国心臓血管麻酔学会"],
+     ["TEE", "transesophageal echocardiography", "経食道心エコー"],
+     ["TEG", "thromboelastography", "トロンボエラストグラフィー"],
+     ["TXA", "tranexamic acid", "トラネキサム酸"],
+     ["VA-ECMO", "venoarterial extracorporeal membrane oxygenation",
+      "静脈-動脈体外式膜型人工肺"]]
+)

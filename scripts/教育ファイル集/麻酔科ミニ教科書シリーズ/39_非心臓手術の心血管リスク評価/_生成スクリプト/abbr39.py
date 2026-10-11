@@ -1,0 +1,35 @@
+# -*- coding: utf-8 -*-
+"""㊴ 本書で使う略語"""
+
+ABBREV = (
+    ["略語", "英語表記", "日本語表記"],
+    [
+        ["JCS", "Japanese Circulation Society", "日本循環器学会"],
+        ["ESC", "European Society of Cardiology", "欧州心臓病学会"],
+        ["AHA / ACC", "American Heart Association / American College of Cardiology",
+         "米国心臓協会／米国心臓病学会"],
+        ["RCRI", "Revised Cardiac Risk Index", "改訂心リスク指標"],
+        ["NSQIP", "National Surgical Quality Improvement Program",
+         "米国の外科手術データベース"],
+        ["MET", "metabolic equivalent", "代謝当量（運動耐容能の単位）"],
+        ["DASI", "Duke Activity Status Index", "運動耐容能の構造化質問票"],
+        ["CPET", "cardiopulmonary exercise testing", "心肺運動負荷試験"],
+        ["BNP / NT-proBNP", "(N-terminal pro-)B-type natriuretic peptide",
+         "脳性ナトリウム利尿ペプチド（およびその前駆体断片）"],
+        ["MINS", "myocardial injury after noncardiac surgery",
+         "非心臓手術後の心筋傷害"],
+        ["hs-cTn", "high-sensitivity cardiac troponin", "高感度心筋トロポニン"],
+        ["PCI", "percutaneous coronary intervention", "経皮的冠動脈インターベンション"],
+        ["DAPT", "dual antiplatelet therapy", "抗血小板薬2剤併用療法"],
+        ["DOAC", "direct oral anticoagulant", "直接経口抗凝固薬"],
+        ["RAS 阻害薬", "renin-angiotensin system inhibitor",
+         "レニン・アンジオテンシン系阻害薬"],
+        ["GLP-1", "glucagon-like peptide-1", "グルカゴン様ペプチド-1"],
+        ["SGLT2", "sodium-glucose cotransporter 2",
+         "ナトリウム・グルコース共輸送体2"],
+        ["CIED", "cardiovascular implantable electronic device",
+         "心臓植込み型電気デバイス"],
+        ["MAP", "mean arterial pressure", "平均動脈圧"],
+        ["AKI", "acute kidney injury", "急性腎障害"],
+    ],
+)

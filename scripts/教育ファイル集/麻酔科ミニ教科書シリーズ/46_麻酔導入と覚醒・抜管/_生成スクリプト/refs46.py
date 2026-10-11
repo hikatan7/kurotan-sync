@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+"""㉟ 文献台帳（PubMed esummary から生成）。手で編集しない。"""
+REFS = {
+    '38599916': 'Crístian de Carvalho C, et al. Effectiveness of preoxygenation strategies: a systematic review and network meta-analysis. Br J Anaesth. 2024;133(1):152-163. PMID: 38599916. doi:10.1016/j.bja.2024.02.028',
+    '25388828': 'Patel A, et al. Transnasal Humidified Rapid-Insufflation Ventilatory Exchange (THRIVE): a physiological method of increasing apnoea time in patients with difficult airways. Anaesthesia. 2015;70(3):323-9. PMID: 25388828. doi:10.1111/anae.12923',
+    '28035669': 'Mir F, et al. A randomised controlled trial comparing transnasal humidified rapid insufflation ventilatory exchange (THRIVE) pre-oxygenation with facemask pre-oxygenation in patients undergoing rapid sequence induction of anaesthesia. Anaesthesia. 2017;72(4):439-443. PMID: 28035669. doi:10.1111/anae.13799',
+    '30767199': 'Hermez LA, et al. A physiological study to determine the mechanism of carbon dioxide clearance during apnoea when using transnasal humidified rapid insufflation ventilatory exchange (THRIVE). Anaesthesia. 2019;74(4):441-449. PMID: 30767199. doi:10.1111/anae.14541',
+    '33599993': 'Sjöblom A, et al. Pre-oxygenation using high-flow nasal oxygen vs. tight facemask during rapid sequence induction. Anaesthesia. 2021;76(9):1176-1183. PMID: 33599993. doi:10.1111/anae.15426',
+    '26512948': 'Tran DT, et al. Rocuronium versus succinylcholine for rapid sequence induction intubation. Cochrane Database Syst Rev. 2015;2015(10):CD002788. PMID: 26512948. doi:10.1002/14651858.CD002788.pub3',
+    '30347104': 'Birenbaum A, et al. Effect of Cricoid Pressure Compared With a Sham Procedure in the Rapid Sequence Induction of Anesthesia: The IRIS Randomized Clinical Trial. JAMA Surg. 2019;154(1):9-17. PMID: 30347104. doi:10.1001/jamasurg.2018.3577',
+    '36520073': 'Thilen SR, et al. 2023 American Society of Anesthesiologists Practice Guidelines for Monitoring and Antagonism of Neuromuscular Blockade: A Report by the American Society of Anesthesiologists Task Force on Neuromuscular Blockade. Anesthesiology. 2023;138(1):13-41. PMID: 36520073. doi:10.1097/ALN.0000000000004379',
+    '36520074': 'Brull SJ, et al. Measuring Success of Patient Safety Initiatives: The 2023 American Society of Anesthesiologists Practice Guidelines for Monitoring and Antagonism of Neuromuscular Blockade. Anesthesiology. 2023;138(1):4-6. PMID: 36520074. doi:10.1097/ALN.0000000000004435',
+    '38337560': 'Blum FE, et al. Residual Neuromuscular Block Remains a Safety Concern for Perioperative Healthcare Professionals: A Comprehensive Review. J Clin Med. 2024;13(3). PMID: 38337560. doi:10.3390/jcm13030861',
+    '32282427': 'Kheterpal S, et al. Sugammadex versus Neostigmine for Reversal of Neuromuscular Blockade and Postoperative Pulmonary Complications (STRONGER): A Multicenter Matched Cohort Analysis. Anesthesiology. 2020;132(6):1371-1381. PMID: 32282427. doi:10.1097/ALN.0000000000003256',
+    '27212741': 'Misal US, et al. Delayed recovery from anesthesia: A postgraduate educational review. Anesth Essays Res. 2016;10(2):164-72. PMID: 27212741. doi:10.4103/0259-1162.165506',
+    '33370461': 'Wei B, et al. Risk factors for emergence agitation in adults after general anesthesia: A systematic review and meta-analysis. Acta Anaesthesiol Scand. 2021;65(6):719-729. PMID: 33370461. doi:10.1111/aas.13774',
+    '34465469': 'Evered LA, et al. Anaesthetic depth and delirium after major surgery: a randomised clinical trial. Br J Anaesth. 2021;127(5):704-712. PMID: 34465469. doi:10.1016/j.bja.2021.07.021',
+}

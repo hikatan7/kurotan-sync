@@ -1,0 +1,35 @@
+# -*- coding: utf-8 -*-
+"""第Ⅳ章 巻頭の略語一覧"""
+
+ABBREV = (
+    ["略語", "英語", "日本語"],
+    [["ACC", "American College of Cardiology", "米国心臓病学会"],
+     ["AHA", "American Heart Association", "米国心臓協会"],
+     ["ASE", "American Society of Echocardiography", "米国心エコー図学会"],
+     ["CI", "confidence interval", "信頼区間"],
+     ["EACTS", "European Association for Cardio-Thoracic Surgery",
+      "欧州心臓胸部外科学会"],
+     ["EROA", "effective regurgitant orifice area", "有効逆流口面積"],
+     ["ESC", "European Society of Cardiology", "欧州心臓病学会"],
+     ["HR", "hazard ratio", "ハザード比"],
+     ["ICU", "intensive care unit", "集中治療室"],
+     ["LVEF", "left ventricular ejection fraction", "左室駆出率"],
+     ["MAC", "monitored anesthesia care", "監視下麻酔管理"],
+     ["MR", "mitral regurgitation", "僧帽弁閉鎖不全（僧帽弁逆流）"],
+     ["M-TEER", "mitral transcatheter edge-to-edge repair",
+      "経カテーテル僧帽弁接合不全修復術"],
+     ["MVA", "mitral valve area", "僧帽弁口面積"],
+     ["NYHA", "New York Heart Association", "ニューヨーク心臓協会（心機能分類）"],
+     ["OR", "odds ratio", "オッズ比"],
+     ["SLDA", "single leaflet device attachment", "単尖弁離脱"],
+     ["TAVI", "transcatheter aortic valve implantation",
+      "経カテーテル大動脈弁植込み術"],
+     ["TEE", "transesophageal echocardiography", "経食道心エコー"],
+     ["TEER", "transcatheter edge-to-edge repair",
+      "経カテーテル接合不全修復術"],
+     ["TMG", "transmitral mean gradient", "僧帽弁の平均圧較差"],
+     ["TMVR", "transcatheter mitral valve replacement",
+      "経カテーテル僧帽弁置換術"],
+     ["T-TEER", "tricuspid transcatheter edge-to-edge repair",
+      "経カテーテル三尖弁接合不全修復術"]]
+)

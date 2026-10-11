@@ -1,0 +1,5 @@
+- [読み物シリーズの編集方針](anesthesia-essay-style.md) — まとめ・振り返り・クイズは付けない。毎回デザインを変える。
+- [科学読み物 量産プロンプト](anesthesia-essay-prompt.md) — 麻酔・薬理・生理を横断する文学的コラムの保存プロンプト。
+- [横断検索プロンプト（教育版）](anesthesia-crosssearch-prompt.md) — 「翌日の臨床で使える」教育コラム側の保存プロンプト。持ち帰り四行あり。
+- [図表設計プロンプト](anesthesia-figure-prompt.md) — 図表一式の出力項目と、概念図／実測値を混同しないための注意点。
+- [読み物テーマ50＋連作](anesthesia-essay-themes.md) — テーマのストックと、眠り・血液・時間・呼吸の連作シリーズ。

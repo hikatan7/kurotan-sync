@@ -1,0 +1,46 @@
+# -*- coding: utf-8 -*-
+"""第Ⅴ章 巻頭の略語一覧"""
+
+ABBREV = (
+    ["略語", "英語", "日本語"],
+    [["ACC", "American College of Cardiology", "米国心臓病学会"],
+     ["AHA", "American Heart Association", "米国心臓協会"],
+     ["BASILICA",
+      "bioprosthetic or native aortic scallop intentional laceration to "
+      "prevent iatrogenic coronary artery obstruction",
+      "冠動脈閉塞を防ぐための弁尖切開"],
+     ["BHF", "British Heart Foundation", "英国心臓財団"],
+     ["CIED", "cardiac implantable electronic device", "植込み型心臓電気デバイス"],
+     ["EACTS", "European Association for Cardio-Thoracic Surgery",
+      "欧州心臓胸部外科学会"],
+     ["ESC", "European Society of Cardiology", "欧州心臓病学会"],
+     ["HR", "hazard ratio", "ハザード比"],
+     ["ICD", "implantable cardioverter-defibrillator", "植込み型除細動器"],
+     ["ISHLT", "International Society for Heart and Lung Transplantation",
+      "国際心肺移植学会"],
+     ["KCCQ", "Kansas City Cardiomyopathy Questionnaire",
+      "カンザスシティ心筋症質問票（QOL 指標）"],
+     ["LAAO", "left atrial appendage occlusion", "左心耳閉鎖"],
+     ["LAMPOON",
+      "intentional laceration of the anterior mitral leaflet to prevent "
+      "left ventricular outflow tract obstruction",
+      "左室流出路閉塞を防ぐための僧帽弁前尖切開"],
+     ["NYHA", "New York Heart Association", "ニューヨーク心臓協会（心機能分類）"],
+     ["QOL", "quality of life", "生活の質"],
+     ["RR", "risk ratio", "リスク比"],
+     ["STS", "Society of Thoracic Surgeons", "米国胸部外科学会"],
+     ["TAVI", "transcatheter aortic valve implantation",
+      "経カテーテル大動脈弁植込み術"],
+     ["TAVR", "transcatheter aortic valve replacement",
+      "経カテーテル大動脈弁置換術（TAVI と同義）"],
+     ["TEE", "transesophageal echocardiography", "経食道心エコー"],
+     ["TMVR", "transcatheter mitral valve replacement",
+      "経カテーテル僧帽弁置換術"],
+     ["TR", "tricuspid regurgitation", "三尖弁閉鎖不全（三尖弁逆流）"],
+     ["T-TEER", "tricuspid transcatheter edge-to-edge repair",
+      "経カテーテル三尖弁接合不全修復術"],
+     ["TTVR", "transcatheter tricuspid valve replacement",
+      "経カテーテル三尖弁置換術"],
+     ["TVT", "Transcatheter Valve Therapy",
+      "米国 STS/ACC の経カテーテル弁治療レジストリ"]]
+)
