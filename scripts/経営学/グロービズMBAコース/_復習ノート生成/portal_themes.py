@@ -43,7 +43,8 @@ def keys_of(term):
 
 
 def book_theme(n):
-    for k, pat in (("think", "クリティカル"), ("mkt", "マーケティング"), ("org", "組織行動"),
+    for k, pat in (("think", "クリティカル"), ("mkt", "マーケティング"), ("strat", "経営戦略"),
+                   ("org", "組織行動"), ("org", "リーダーシップ"), ("hrm", "人材"),
                    ("acc", "アカウンティング"), ("fin", "ファイナンス")):
         if pat in n:
             return k

@@ -1,0 +1,37 @@
+# -*- coding: utf-8 -*-
+"""第Ⅲ章 巻頭の略語一覧"""
+
+ABBREV = (
+    ["略語", "英語", "日本語"],
+    [["ACC", "American College of Cardiology", "米国心臓病学会"],
+     ["AHA", "American Heart Association", "米国心臓協会"],
+     ["CI", "confidence interval", "信頼区間"],
+     ["CSF", "cerebrospinal fluid", "脳脊髄液（髄液）"],
+     ["CSFD", "cerebrospinal fluid drainage", "髄液ドレナージ"],
+     ["DTA", "descending thoracic aorta", "下行大動脈"],
+     ["EVAR", "endovascular aneurysm repair", "腹部大動脈ステントグラフト内挿術"],
+     ["F/B-EVAR", "fenestrated/branched endovascular aneurysm repair",
+      "開窓型・分枝型ステントグラフト内挿術"],
+     ["FET", "frozen elephant trunk",
+      "弓部置換＋下行大動脈ステントグラフト"],
+     ["Hb", "hemoglobin", "ヘモグロビン"],
+     ["ICU", "intensive care unit", "集中治療室"],
+     ["MAP", "mean arterial pressure", "平均動脈圧"],
+     ["MEP", "motor evoked potential", "運動誘発電位"],
+     ["MIS2ACE",
+      "minimally invasive staged segmental artery coil embolization",
+      "低侵襲・段階的な分節動脈コイル塞栓"],
+     ["MRI", "magnetic resonance imaging", "磁気共鳴画像"],
+     ["NIRS", "near-infrared spectroscopy", "近赤外線分光法"],
+     ["OR", "odds ratio", "オッズ比"],
+     ["RCT", "randomized controlled trial", "無作為化比較試験"],
+     ["RR", "risk ratio", "リスク比"],
+     ["SCI", "spinal cord ischemia / injury", "脊髄虚血・脊髄障害"],
+     ["SCPP", "spinal cord perfusion pressure", "脊髄灌流圧"],
+     ["SSEP", "somatosensory evoked potential", "体性感覚誘発電位"],
+     ["TAAA", "thoracoabdominal aortic aneurysm", "胸腹部大動脈瘤"],
+     ["TEVAR", "thoracic endovascular aortic repair",
+      "胸部大動脈ステントグラフト内挿術"],
+     ["VQI", "Vascular Quality Initiative",
+      "米国血管外科学会の質改善レジストリ"]]
+)

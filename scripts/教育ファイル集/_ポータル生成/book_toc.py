@@ -67,7 +67,7 @@ PARTS = [
     (P[8], [u"32　大動脈疾患の病態", u"33　大動脈手術の麻酔",
             u"34　脳保護", u"35　脊髄保護", u"36　TEVAR・TAAA"]),
     (P[9], [u"37　肺切除術", u"38　胸腔鏡・ロボット手術",
-            u"39　呼吸器外科の緊急事態"]),
+            u"39　呼吸器外科の緊急事態", u"40　縦隔腫瘍・中枢気道"]),
     (P[10], [u"40　消化器外科", u"41　肝胆膵手術", u"42　腎・泌尿器手術"]),
     (P[11], [u"43　産科麻酔", u"44　小児麻酔", u"45　高齢者麻酔"]),
     (P[12], [u"46　周術期凝固", u"47　輸血", u"48　POC 凝固検査",
@@ -98,6 +98,9 @@ RULES = [
      P00, u"1　麻酔科医の仕事とは何か"),
     ([u"評価・計画・実行・再評価", u"麻酔講義レジメ"],
      P00, u"3　麻酔管理を組み立てる基本フレーム"),
+    # 循環器ガイドラインの周術期抜粋（Structural・補助循環・心疾患合併）は Ⅶ に置く。
+    # フォルダが「高度心臓血管麻酔」の下にあるため、心臓麻酔の規則より前で拾う。
+    ([u"循環器ガイドライン"],                         P[6], u"27　その他の Structural Heart"),
     # 心肺蘇生は専用テーマ。総論や心臓の規則に取られないよう、ここで先に拾う。
     # 「AED」「BLS」は他の語の一部に当たりうるので入れない。
     ([u"心停止", u"蘇生", u"心肺蘇生", u"急変", u"除細動", u"cpr",
@@ -138,7 +141,7 @@ RULES = [
     ([u"神経モニタリング"],                          P[3], u""),
     ([u"tee", u"経食道心エコー"],                    P[3], u"17　経食道心エコー（TEE）"),
     ([u"人工心肺", u"心臓麻酔の止血"],                P[5], u"22　人工心肺（CPB）"),
-    ([u"心臓麻酔の基礎", u"高度心臓血管麻酔"],        P[5], u"21　心臓麻酔の基本"),
+    ([u"心臓麻酔の基礎", u"高度心臓血管麻酔", u"心臓手術の麻酔"], P[5], u"21　心臓麻酔の基本"),
     ([u"cabg", u"冠動脈バイパス"],                   P[5], u"24　冠動脈バイパス術"),
     ([u"弁膜症"],                                   P[5], u"23　弁膜症手術"),
     ([u"心臓麻酔", u"心臓血管麻酔", u"補助循環",
@@ -157,13 +160,17 @@ RULES = [
     # ---- 周術期医学・安全・チーム ----
     ([u"医療安全", u"体位", u"末梢神経障害", u"感染対策",
       u"手術部位感染", u"手指衛生", u"ソーダライム",
-      u"インシデント", u"チェックリスト", u"安全を守る"],           P[16], u"60　医療安全"),
+      u"インシデント", u"チェックリスト", u"安全を守る",
+      u"胃管", u"上部消化管出血"],                                  P[16], u"60　医療安全"),
     ([u"eras", u"prehabilitation", u"早期離床"],     P[16], u"59　ERAS・周術期最適化"),
     ([u"チーム医療"],                               P[16], u"61　チーム医療"),
 
     # ---- 〔52〕呼吸器外科の麻酔（部の全体を扱う巻）。⑱の「呼吸管理」規則や
     #      「術後鎮痛」「eras」などの総論規則に取られないよう、ここで先に拾う ----
     ([u"呼吸器外科の麻酔", u"呼吸管理と分離肺換気"],   P[9], u""),
+    # 〔54〕縦隔腫瘍（「気道」の規則に取られるため先に拾う）
+    ([u"縦隔腫瘍", u"縦隔", u"中枢気道", u"気道ステント", u"硬性気管支鏡"],
+     P[9], u"40　縦隔腫瘍・中枢気道"),
 
     # ---- 呼吸（胸部外科より先に。⑱は「分離肺換気」で肺切除に取られるため）----
     ([u"肺保護換気", u"換気血流", u"低酸素血症"],
@@ -258,11 +265,79 @@ def classify(path, title):
     return None, u""
 
 
-# テーマの表示順（部 → 目次の外）
-THEME_ORDER = [p for p, _ in PARTS] + EXTRA
-# 心肺蘇生のボタンは ⅩⅥ 緊急時対応 の直後に置く
-THEME_ORDER.insert(THEME_ORDER.index(P[15]) + 1, T_CPR)
-# アレルギー・アナフィラキシーのボタンは心肺蘇生の直後に置く
-THEME_ORDER.insert(THEME_ORDER.index(T_CPR) + 1, T_ALLERGY)
-# テーマ → その下の章の並び
-SUB_ORDER = dict((p, c) for p, c in PARTS)
+# ================= 総論・各論への再編（2026-10-12） =================
+# 判定（RULES）は従来の「部・章」のまま行い、classify() の最後でこの表に読み替える。
+# テーマは総論9＋各論4＋目次の外。章番号は外して、小項目を少なくした。
+G_SORON = u"総論"
+G_KAKURON = u"各論"
+N_KISO, N_JUTSUZEN, N_KIDO, N_MONI, N_KUIKI = (u"麻酔管理の基礎", u"術前評価と麻酔計画",
+    u"気道・導入・覚醒", u"モニタリング・超音波", u"区域麻酔・鎮痛")
+N_GYOKO, N_ICU, N_KINKYU, N_ANZEN = (u"凝固・輸血・大量出血", u"術後・ICU・重症患者",
+    u"緊急時対応", u"周術期医学・安全・チーム")
+N_JUNKAN, N_KOKYU, N_FUKUBU, N_SANKA = (u"循環器の麻酔", u"呼吸器外科の麻酔",
+    u"腹部・一般外科・脳神経外科の麻酔", u"産科・小児・高齢者")
+
+NEW_PARTS = [
+    (N_KISO, [u"麻酔科医の仕事と基本フレーム", u"周術期生理学", u"麻酔薬の薬理",
+              u"輸液・電解質・酸塩基", u"呼吸管理", u"循環管理", u"臨床推論"]),
+    (N_JUTSUZEN, [u"術前評価", u"心疾患患者", u"腎疾患・透析患者", u"肝疾患・凝固異常"]),
+    (N_KIDO, [u"気道管理", u"麻酔導入", u"覚醒・抜管"]),
+    (N_MONI, [u"基本モニタリング", u"動脈圧ライン", u"中心静脈カテーテル",
+              u"周術期超音波", u"経食道心エコー（TEE）"]),
+    (N_KUIKI, [u"局所麻酔薬と神経ブロック", u"胸部・腹部の区域麻酔", u"術後鎮痛"]),
+    (N_GYOKO, [u"周術期凝固", u"輸血", u"POC 凝固検査", u"宗教的輸血拒否"]),
+    (N_ICU, [u"術後管理", u"術後合併症", u"術後ショック", u"AKI", u"CRRT"]),
+    (N_KINKYU, [u"術中危機管理", u"アナフィラキシー・アレルギー", u"「手術を止める」判断"]),
+    (N_ANZEN, [u"ERAS・周術期最適化", u"医療安全", u"チーム医療"]),
+    (N_JUNKAN, [u"心臓手術", u"Structural Heart", u"CIED（ペースメーカー・ICD）", u"大血管"]),
+    (N_KOKYU, [u"肺切除術", u"胸腔鏡・ロボット手術", u"呼吸器外科の緊急事態",
+                u"縦隔腫瘍・中枢気道"]),
+    (N_FUKUBU, [u"消化器外科", u"肝胆膵手術", u"腎・泌尿器手術", u"脳神経外科・神経麻酔"]),
+    (N_SANKA, [u"産科麻酔", u"小児麻酔", u"高齢者麻酔"]),
+]
+SORON = [N_KISO, N_JUTSUZEN, N_KIDO, N_MONI, N_KUIKI, N_GYOKO, N_ICU, N_KINKYU, T_CPR, N_ANZEN]
+KAKURON = [N_JUNKAN, N_KOKYU, N_FUKUBU, N_SANKA]
+GROUP_OF = dict([(t, G_SORON) for t in SORON] + [(t, G_KAKURON) for t in KAKURON])
+
+# 旧部 → 新テーマ。章を持たない旧部の資料は、章ごとの表（_SUB）か部の既定（_DEF）で決める。
+_PART = {P00: N_KISO, P[0]: N_KISO, P[17]: N_KISO, P[1]: N_JUTSUZEN, P[2]: N_KIDO,
+         P[3]: N_MONI, P[4]: N_KUIKI, P[12]: N_GYOKO, P[13]: N_ICU, P[14]: N_ICU,
+         P[15]: N_KINKYU, P[16]: N_ANZEN, P[5]: N_JUNKAN, P[6]: N_JUNKAN, P[7]: N_JUNKAN,
+         P[8]: N_JUNKAN, P[9]: N_KOKYU, P[10]: N_FUKUBU, P[11]: N_SANKA,
+         T_ALLERGY: N_KINKYU}
+_DEF = {P00: u"麻酔科医の仕事と基本フレーム", P[17]: u"臨床推論", P[5]: u"心臓手術",
+        P[6]: u"Structural Heart", P[7]: u"CIED（ペースメーカー・ICD）", P[8]: u"大血管",
+        T_ALLERGY: u"アナフィラキシー・アレルギー"}
+_SUB = {u"52　脳保護と神経麻酔": (N_FUKUBU, u"脳神経外科・神経麻酔")}
+
+
+def _strip_no(chap):
+    i = chap.find(u"　")
+    return chap[i + 1:] if i >= 0 and chap[:i].isdigit() else chap
+
+
+def remap(part, chap):
+    """旧（部, 章）→ 新（テーマ, 小項目）。目次の外・付録・心肺蘇生はそのまま返す。"""
+    if chap in _SUB:
+        return _SUB[chap]
+    if part not in _PART:
+        return part, chap
+    if part in _DEF:
+        return _PART[part], _DEF[part]
+    return _PART[part], _strip_no(chap)
+
+
+_classify_old = classify
+
+
+def classify(path, title):
+    part, chap = _classify_old(path, title)
+    if part is None:
+        return None, u""
+    return remap(part, chap)
+
+
+# テーマの表示順：総論 → 各論 → 目次の外
+THEME_ORDER = SORON + KAKURON + EXTRA
+# テーマ → その下の小項目の並び
+SUB_ORDER = dict(NEW_PARTS)

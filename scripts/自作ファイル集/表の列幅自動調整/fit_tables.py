@@ -10,7 +10,7 @@
      見出し行・左端の項目名（表幅の 45% まで）・表幅の 1/4 以下の項目は折れると重い罰点、
      1/4〜0.55 は軽い罰点。
      列の間で幅をやり取りする局所探索で、この値が最小になる配分を選ぶ。
-  3. 文字を 5% ずつ下げた案（元の 0.85 倍まで）も比べ、折れが減るときだけ採る。
+  3. 文字を 5% ずつ下げた案（元の 0.9 倍まで）も比べ、折れが減るときだけ採る。
   4. Word で実際の行数を数え、まだ折れている短い項目は列を少しずつ広げる。
 """
 import sys, os, re, math, shutil, tempfile
@@ -32,7 +32,8 @@ FONTFILES = {  # (regular, bold)
     "游明朝": ("yumin.ttf", "yumindb.ttf"),
 }
 SAFETY = 1.06          # 推定幅の余裕（Word の実描画との差を吸収）
-MIN_SCALE = 0.85       # 文字の縮小は元の 0.85 倍まで
+MIN_SCALE = 0.9        # 文字の縮小は元の 0.9 倍まで（読める大きさを守る）
+MIN_PT = 8.5           # どの表もこれより小さくは縮めない
 PT_PER_EMU = 1 / 12700
 _cache = {}
 
@@ -223,7 +224,11 @@ def fit_docx(src, dst):
         ncol = len(gw)
         choice = None
         scale = 1.0
-        while scale >= MIN_SCALE - 1e-6:
+        from docx.table import _Cell as _C
+        sizes = [r.font.size.pt if r.font.size else dsize
+                 for _ri, _ci, _tc in table_cells(tbl) for _p in _C(_tc, tbl).paragraphs for r in _p.runs if r.text.strip()]
+        tmin = min(sizes) if sizes else dsize
+        while scale >= MIN_SCALE - 1e-6 and (scale == 1.0 or tmin * scale >= MIN_PT - 1e-6):
             cells, pad = measure(tbl, dfont, dsize, scale)
             w, c = optimize(cells, pad, ncol, W)
             c += (1 - scale) * 40  # 5% 縮めるごとに 2 点。短い項目の折れを消すときだけ選ぶ

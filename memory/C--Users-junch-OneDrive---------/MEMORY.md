@@ -14,7 +14,7 @@
 - [院内文書の作成者表記](feedback-hospital-doc-author-line.md) — 院内文書には「作成：麻酔科　玉里順子」を表題下・右寄せで入れる
 - [財務分析シート](project-financial-analysis-sheet.md) — デスクトップ「財務分析シート.xlsx」PL/BS/CF入力→約25指標自動計算(2026-07-10)
 - [決算書PDF解析プロトコル](workflow-financial-pdf-protocol.md) — PDF添付+「財務分析して」で発動: 数値抽出→シート複製に転記→バランスチェックOK確認→所見報告
-- [Chrome検索2モード運用](workflow-chrome-search-two-modes.md) — ①簡易検索=毎回ハイパーリンク出典入りWordを指定ページ数(A4 n枚)で作成 ②AI横断検索=Gemini→Perplexity→Copilot→ChatGPT順で完全回収→Word/メモに詳細まとめ(Gemini以外は拡張の制限で操作不可、ユーザーがコピペ担当)
+- [Chrome検索2モード運用](workflow-chrome-search-two-modes.md) — ①簡易検索=毎回ハイパーリンク出典入りWordを指定ページ数(A4 n枚)で作成 ②AI横断検索=Gemini→Perplexity→Copilot→ChatGPT順で完全回収→Word/メモに詳細まとめ(2026-10-16からPerplexity・Copilot・Gensparkも拡張で操作可)
 - [AI横断検索プロンプト](workflow-cross-site-search.md) — 文献・画像を多サイト一括収集させる汎用テンプレ。モデル非依存、URL捏造禁止・2巡目追撃つき
 - [マスタープロンプト](workflow-master-prompt.md) — 「マスタープロンプトで:【テーマ】」と来たら学習資料用の網羅回答(10要件)を適用。モデル問わず有効、Geminiにも登録済み
 - [ページ数ちょうどのWord資料](workflow-docx-exact-page-count.md) — 版面を先に詰める→maxYで溢れ特定。空白ページはadd_page_breakが原因
@@ -38,67 +38,29 @@
 - [急性期・手術室・ICU 経営診断レポート](project-or-consult-diagnosis.md) — コンサル視点の辛口診断15頁docx完成(2026-07-23)、削減優先順位6段階・診療科4象限仕分け
 - [ファイル整理ツール](project-file-organizer-tool.md) — デスクトップのGUIアプリ。重複検出＋条件抽出→移動(取消可)/ごみ箱(2026-07-26)
 - [ファイル保護ツール](project-file-protect-tool.md) — デスクトップのGUIアプリ。誤削除防止(ACL)＋フォルダアイコン色分け。Windows ACLの落とし穴メモつき(2026-07-26)
-- [AKI利尿薬 教材一式](project-aki-diuretics-teaching.md) — シリーズ④。教科書76頁・番号引用45件(2026-09-22)＋スライド59枚pptx。KDIGO2026は草案反映
-- [SGB教材一式](project-sgb-teaching-set.md) — ミニ教科書⑧。教科書45頁・番号引用19件＋要点ガイド＋スライド。元PDFの文献誤り4点を付録Dに記録
+- [ミニ教科書シリーズ 各巻の目次](index-minitextbook-volumes.md) — ①〜〔54〕の巻ごとの記憶43本へのリンク集（巻番号・題名で探す）
 - [令和8年度改定のロボット加算](reference-r8-robot-surgery-addon.md) — 内視鏡手術用支援機器加算15,000点、2026/06/01施行。年200例基準は全科284件で充足済み
+- [ロボット導入の増分CFモデル](project-robot-incremental-cf-model.md) — テーマ18。置換は1例−11.6万円、NPVゼロの純増は年92〜104件。4AIをChromeで直接操作し調達実額を原典照合
 - [令和8年度改定の麻酔・鎮静ルール](reference-r8-anesthesia-sedation-rules.md) — 新L001/L007/L008の3軸再編＋プレセデックス統一事例106。20分以上・非深鎮静は算定区分なし
-- [AKD期管理とCRRT意思決定 教材一式](project-akd-crrt-teaching-set.md) — ミニ教科書⑤。専門家向け61頁・番号引用47件。略語展開が本文の数字を58箇所壊した事故と、その直し方
-- [麻酔薬理ハンドブック](project-anesthesia-pharm-handbook.md) — 専攻医向け全15章100頁docx+PDF+図版26点。08_麻酔・気道管理内。専攻医版30頁（コラム8本）を2026-09-24追加
 - [第9回SACMA研究会 資料一式](project-sacma-9th.md) — 座席配置表15枚＋名札39枚＋グループ表。午後は全6ブース各6名、④IABP14時のみ確定枠12名
 - [ドゥブランシュ売却案件](project-doublanche-sale.md) — 京都・一棟収益物件の売却。健美家一括査定で13社超と交渉中、売出14,980万円/一般媒介。台帳はデスクトップ「不動産金融」
-- [麻酔中の輸液管理テキスト](project-fluid-management-textbook.md) — ①ベーシック116頁・番号引用77件(2026-09-22)＋②アドバンス66頁＋研修医配布資料10頁
-- [CVC・PAC統合教材3点](project-cvc-pac-teaching-set.md) — シリーズ⑥。専門医版91頁・番号引用34件＋研修医版36頁＋スライド4本。2026-10-07にJSAプラクティカルガイド2026へ改訂（先端位置はZone A）
-- [血液製剤とアルブミン教科書](project-blood-products-textbook.md) — シリーズ③。122頁・番号引用45件(2026-09-22)。病態生理コラム20＋歴史コラム12。主題は「袋の中身≠体内で起きること」。専攻医向けミニテキスト（2026-08-31、13頁版まで増補。cell-based model＋大量出血の凝固管理、自作図版3点）も同ファイルに記載
 - [スライド生成基盤 pptxlib](project-pptxlib-slide-engine.md) — 高密度スライドの自作ビルダー。積み上げカーソル・行高係数・目視QA必須の3教訓
-- [術中の自己血輸血テキスト](project-autologous-transfusion-textbook.md) — ミニ教科書⑨82頁完成。ANH保存＝採血日24時まで、K920「5」は返血200mLごと1,000点等の一次資料メモ
 - [教育ファイル集（麻酔教材の集約先）](project-education-file-collection.md) — デスクトップ「教育ファイル集」に麻酔・周術期教材270件を全集約(2026-08-21)。経営事務系は対象外
-- [ミニ教科書⑱〜㉑（呼吸・循環・心停止・凝固）](project-minitextbook-18to21.md) — 2026-09-09に4巻新規作成。4巻とも番号引用化済（⑱55頁14件／⑲50頁12件／⑳48頁11件／㉑49頁12件）。⑱専攻医版30頁を2026-09-24追加（PROTHOR・iPROVE-OLV入り）
-- [常位胎盤早期剝離 教科書㉒](project-abruption-textbook.md) — 専門医版107頁＋専攻医版10頁＋詰め込み10枚。bookkitのテンプレdocx消失の対処つき
-- [AKI教科書㉓](project-aki-textbook-23.md) — 73頁・番号引用34件。Genspark査読62件を反映済(2026-09-25)。SEPSISPAM 80〜85・輸液をためらわない場面の囲みほか
-- [腎の溶質処理と血液浄化 教科書㉔](project-solute-handling-textbook-24.md) — 66頁・番号引用30件。溶質を分子量でなく排泄機序で四群に分ける。CRRTは糸球体の代用で尿細管の代用ではない
-- [ABO不適合移植と輸血 教科書㉕](project-abo-incompatible-transfusion-textbook.md) — 60頁・番号引用26件。「血液型＝圧縮ファイル」で全章を貫く読み物構成。三本の軸と三つの問い
 - [日赤の血小板製剤はPASではない](reference-jrc-platelet-not-pas.md) — 標準は血漿浮遊の濃厚血小板-LR。「7割PAS」は欧州スペックとの混同
-- [蘇生アルゴリズムの変遷と周術期心停止 教科書㉖](project-resuscitation-textbook-26.md) — 87頁・全30章。ACLSの60年／RRS／開心術後心停止。麻酔資料ポータルSEC-04に一次資料込みの横断検索を統合
-- [悪性高熱症 教科書㉗](project-malignant-hyperthermia-textbook-27.md) — 51頁・番号引用11件。JSAガイドラインは2016→2025に改訂済み。ダントロレンの上限が消えた。当院備蓄14本では92kgに3mg/kg届かず。2014年2報はRiazi/Visoiuで確定(2026-09-22)
-- [腎不全患者・透析患者の麻酔 教科書㉘](project-renal-dialysis-anesthesia-textbook-28.md) — 75頁・番号引用59件。腎臓の仕事を六つに分ける。カリウム5.5/6.0は医師の行動を測った数字、スガマデクスは国内添付文書とFDAで解釈が違う
-- [呼吸器外科の麻酔 教科書〔52〕](project-thoracic-anesthesia-textbook-52.md) — 本編55頁＋専攻医版20頁。他AI原案を照合し誤り9点を付録Bに。PROTHOR・ERS/ESTS2025（VO2peak<12）反映
 - [空白埋めの4冊 ㊽㊾㊿〔51〕](project-gapfill-textbooks-48to51.md) — 術後鎮痛と体幹の区域麻酔25頁／弁膜症とCABG27頁／高齢者麻酔26頁／脳神経外科26頁。**丸数字は㊿ で打ち止め、51巻から〔51〕表記**
-- [空白埋めの3冊 ㊺㊻㊼](project-gapfill-textbooks-45to47.md) — 周術期生理学30頁／麻酔導入と覚醒・抜管28頁／心臓植込み型電子デバイス29頁。各＋専攻医版10頁
-- [麻酔科医の臨床推論 教科書㊹](project-clinical-reasoning-textbook-44.md) — 本編38頁・全22章・番号引用33件＋専攻医版10頁。三つの問いと機序の「箱」。既刊への対応表が骨格
-- [腹部・一般外科麻酔 教科書㊸](project-abdominal-surgery-textbook-43.md) — 本編41頁・全23章・番号引用42件＋専攻医版10頁。軸は腹腔内圧。ポータルの空白から起こした巻
-- [周術期感染対策 教科書㊷](project-periop-infection-textbook-42.md) — 本編39頁・全20章・番号引用31件＋専攻医版10頁。麻酔科が動かす四つに絞る。決着した推奨と動いている推奨を混ぜない
-- [小児麻酔の基礎 教科書㊶](project-pediatric-anesthesia-textbook-41.md) — 本編46頁・全24章・番号引用32件＋専攻医版10頁。標語の中身を具体化。最終章は「引き受けないという技術」
-- [手術室の外の鎮静 教科書㊵](project-nora-sedation-textbook-40.md) — 本編43頁・全22章・番号引用27件＋専攻医版10頁。「難しさは手技ではなく状況」。酸素は低換気を止めない、処置終了直後が危ない
-- [非心臓手術の心血管リスク評価 教科書㊴](project-noncardiac-risk-textbook-39.md) — 本編52頁・全26章・番号引用45件＋専攻医版10頁。JCSは2022年改訂版が現行（手元のJCS2014は旧版）。米国は2024年版
-- [産科麻酔 教科書㊳](project-obstetric-anesthesia-textbook-38.md) — 本編45頁・全22章・コラム7本・番号引用35件＋専攻医版10頁。無痛分娩と帝王切開。軸は「手技ではなく体制」。丸数字U+の対応表つき
-- [心臓移植・肺移植の麻酔 教科書㊲](project-transplant-anesthesia-textbook-37.md) — 本編44頁・全21章・コラム6本・番号引用37件＋専攻医版10頁。心臓麻酔シリーズ7冊が完成。除神経された心臓は移植後何年経っても続く
-- [成人先天性心疾患の麻酔 教科書㊱](project-achd-anesthesia-textbook-36.md) — 本編48頁・全23章・コラム7本・番号引用32件＋専攻医版10頁。病名ではなく生理で四つに分類する。2025年版ACHDガイドラインあり
-- [低侵襲・ロボット心臓手術の麻酔 教科書㉟](project-mics-robotic-cardiac-textbook-35.md) — 本編46頁・全24章・コラム7本・番号引用37件＋専攻医版10頁。「胸骨を開けない分、術者が失ったものを誰が補うか」が軸
-- [心臓麻酔の緊急と補助循環 教科書㉞](project-cardiac-emergency-mcs-textbook-34.md) — 本編49頁・全24章・コラム9本・番号引用37件＋専攻医版ちょうど10頁。補助循環は「何を足したいのか」を先に言葉にする
-- [心臓麻酔まわりの整理と教科書㉝](project-cardiac-anesthesia-consolidation.md) — 重複章に双方向の相互参照、抜けていた基礎を㉝『心臓麻酔の基礎』52頁に（TEEは10章）。docxの目次直後に段落を足すとTOC更新で消える
-- [大血管手術の脳・脊髄保護 教科書㉜](project-aortic-neuroprotection-textbook-32.md) — 本編50頁・図版16点・番号引用48件＋専攻医版10頁。脊髄は SCPP＝MAP−CSFP と側副血行網、遅発性対麻痺は介入で戻る
-- [心臓麻酔の止血戦略 教科書㉛](project-cardiac-hemostasis-textbook-31.md) — 本編56頁・図版18点・番号引用45件＋専攻医版10頁。フィブリノゲン濃縮製剤が2026-03-23に心臓血管外科へ適応追加（四条件つき）
-- [ICUの人工呼吸管理 教科書㉚](project-icu-ventilation-textbook-30.md) — 本編82頁・全35章・コラム21本・図版28点・番号引用89件＋専攻医版ちょうど20頁。モード解説が第II部の柱
 - [麻酔科ミニ教科書シリーズ](project-anesthesia-minitextbook-series.md) — 教育ファイル集内「麻酔科ミニ教科書シリーズ」に全11巻集約(2026-08-21移動)。表紙は巻番号＋作成日＋「静岡市立静岡病院 麻酔科 玉里順子」
-- [声門上器具と周術期気道トラブル 教科書㉙](project-sga-textbook-29.md) — 75頁・番号引用19件。10頁テキストを全面改稿。2025-JSA抜管GL・DAS2025・NAP7(喉頭痙攣37%)を新規に反映
-- [気道管理 教科書⑬](project-airway-management-textbook.md) — 65頁・番号引用21件。確認できない出典は付録E-2に明記して本文から除外
 - [bookkitのブロックの形](workflow-bookkit-block-shapes.md) — col/sum/note は行のリスト。文字列を渡すと1文字1段落で頁数が倍増する
 - [図版の文字はみ出しを防ぐ](workflow-figure-text-fit.md) — figlibで幅を実測してから枠を決める。既刊44点を作り直した手順つき
 - [略語を初出で展開する](workflow-abbreviation-expansion.md) — 全13巻に巻頭一覧＋章ごとの初出展開。二重括弧・文献行・巻別の別義に注意
 - [ミニ教科書シリーズ スライド版](project-minitextbook-slides.md) — 全10テーマ×2種=20本を教育ファイル集\麻酔科ミニ教科書シリーズ\_スライド版へ配置。②のみ用語解説つき
-- [術前評価と麻酔計画 教科書](project-preop-assessment-textbook.md) — シリーズ⑪。docx104頁+PDF76頁+図版26点(2026-08-20)
 - [声門上器具スライド](project-sga-airway-slides.md) — 研修医用9テーマ目。原典の写真を引用＋自動生成フロー図2枚を描き直し(2026-08-21)
 - [周術期のはじめかた（研修医読本）](project-perioperative-reader.md) — 2026-10-08に流し組み62頁・番号引用106本へ作り直し。症例枠なし・図の文字拡大。ビルドは _生成スクリプト の build2.py
 - [血管確保の実際（10頁テキスト）](project-vascular-access-text.md) — ミニ教科書⑭の元資料。提供図版4点の出典表記が未確定のため⑭では不採用
-- [血管確保 教科書⑭](project-vascular-access-textbook.md) — 50頁・番号引用10件・全19章。図版20点は全て新規作図。図版検査は2段構えで0件まで通す
-- [手術体位と末梢神経障害 教科書⑮](project-positioning-nerve-textbook.md) — 50頁・番号引用12件・全21章。頻度は「何を数えたか」で70倍違う
-- [アナフィラキシーと局所麻酔薬中毒 教科書⑯](project-anaphylaxis-last-textbook.md) — 50頁・番号引用14件。2022年の院内講義が骨格。用量は意図的に書かない
 - [周術期アナフィラキシー統合ガイド](project-periop-anaphylaxis-guide.md) — 5資料統合127頁＋専門医版20枚。2026-10-07に番号引用化（52件・237か所）。旧一覧のLe TM 2014は誤帰属
-- [区域麻酔と脊髄幹麻酔 教科書⑰](project-regional-neuraxial-textbook.md) — 49頁・番号引用19件(2026-09-22に一次文献2件へ差替)。72.5%と6.7分は別研究だった
 - [周術期VPC/VTの4頁テキスト](project-perioperative-va-text.md) — 教育ファイル集に配置。GIK削除・リドカイン格下げ・ランジオロール前面などの記載方針つき
 - [プロンプト集（目的別）](workflow-textbook-master-prompt.md) — 自作ファイル集\プロンプト集に00早見表〜10教科書フルコース。目的別ファイル＋AI別差し替え方式
 - [教材化待ちの一次資料](project-teaching-material-backlog.md) — 教育ファイル集\_教材化待ち に53件。少しずつミニ教科書に作り替える
-- [麻酔科 資料ポータル（教育＋手術室経営）](project-anesthesia-material-portal.md) — 教育ファイル集\麻酔資料ポータル.html。220資料・52巻。部Ⅹは「呼吸器外科の麻酔」。ショートカットのアイコンは「麻」入り（教育ファイル集\_アイコン）。テーマ＝麻酔教科書の目次の部、小項目＝章。振り分けは book_toc.py に一本化
+- [麻酔科 資料ポータル（教育＋手術室経営）](project-anesthesia-material-portal.md) — 教育ファイル集麻酔資料ポータル.html。157資料。2026-10-12に総論10（心肺蘇生は別ボタン）＋各論4（循環器の麻酔ほか）に再編、付録は廃止して素材・プロンプトは _制作用（素材・プロンプト・調査メモ）へ。振り分けは book_toc.py（RULES→remap）
 - [RATS臨床研究の企画](project-rats-research-plan.md) — 182例の単施設研究。論文11本の3年計画、中核はRFID併用のpTis/pT1mi 54%vs6%
 - [番号引用（バンクーバー方式）で統一](feedback-vancouver-citation-style.md) — 本文に肩付き番号、巻末に番号順の参考文献一覧。出典のないテキストは作らない
 - [成果物は会話内で開ける形で渡す](feedback-deliver-files-in-conversation.md) — 相対リンク禁止。SendUserFileで直接出す。貼り付け文面はコピーボタン付きHTML1枚に
@@ -112,14 +74,13 @@
 - [Gemini/ChatGPT/Copilotの文献検索の限界値](reference-gemini-search-limits.md) — 3者に直接確認。一致点のみ信用。Copilotは文献検索に最も不向き
 - [他AIのURL・数値は捏造前提で検証](feedback-verify-ai-supplied-urls.md) — Gemini提示の画像URL12本が全て実在せず。Commons API・curl・Nominatimで裏取りする
 - [CSFD症例報告の口演7分](project-csfd-oral-presentation.md) — デスクトップ「CSFD口演2026」に追加レビューdocx＋再構成14枚＋スライド作法の講義17枚(2026-08-27)
-- [BISモニター教科書⑫](project-bis-monitor-textbook.md) — 48頁・番号引用29件＋スライド15枚/6枚。流布している数値8点を一次文献で検証・修正（付録C）
 - [学会発表の講義スライド](project-conference-presentation-lecture.md) — 教育ファイル集。一般版32枚(倫理・死亡例・国内外の違い入り)が最新、旧38枚版は置換済み
 - [立川綜合病院 統合所見](project-tachikawa-financial-analysis.md) — 心臓は減っておらず消化器が流出（DPC8年）。DPC原表の取り方とAI照合の結果
 - [他院財務諸表の蓄積先](project-hospital-financial-statements-folder.md) — 病院経営学\財務諸表 に病院別フォルダ。富山大学病院5期分析を2026-08-29追加
 - [文字化けPDFの復号](env-pdf-cid-decode.md) — 国立大学法人PDFはCID埋込。グリフ輪郭照合で復号、スクリプトは自作ファイル集\PDF文字化け復号
 - [2026年JSCVAの演題レビュー2件](project-jscva2026-abstracts.md) — 教育ファイル集JSCVA2026に統合。村中(CSFD)・押坂(巨大冠動脈瘤とTEE)＋Perplexity検索プロンプト
 - [肺がん手術の致死的出血 頻度スライド](project-lung-fatal-bleeding-deck.md) — 13枚。分母で4層に分け、一次文献の実数から算出。肺切除限定のIOCA率は未報告
-- [宗教的輸血拒否（エホバの証人）](project-jw-transfusion-refusal.md) — 統合資料47頁＋会議講義用10枚(2026-09-22改訂)。9/18に主要4成分が個人の良心へ(全血は拒否のまま)、2026年に4訴訟13人
+- [宗教的輸血拒否（エホバの証人）](project-jw-transfusion-refusal.md) — 詳細版53頁(3-12新設)＋簡易版2頁＋会議用12枚＋専門医版(2026-10-13)。診療拒否は同意書の構造から、徳洲会は受け入れの仕組み
 - [デスクトップをローカル化](env-desktop-localized.md) — 2026-09-10にOneDriveから切離。実体は C:\Users\junch\Desktop。教育/自作ファイル集もデスクトップに戻し、OneDrive側はクラウドのみの控え。旧フォルダは `OneDrive\_旧デスクトップ` へ改名
 - [フォルダのロック犯人を特定する](env-windows-folder-lock-holders.md) — 「別のプロセスで使用中」の犯人はClaude Code自身のシェルとexplorer。ハンドル列挙で特定し、Bash側から落とす
 - [OneDriveのUIは自動クリック不可](env-onedrive-ui-blocks-automation.md) — クリックは無反応、Tab+Spaceなら通る。Enterは既定ボタンに当たるので禁止
@@ -131,7 +92,7 @@
 - [2026年度CVカテ講習会](project-cv-training-2026.md) — 教育ファイル集\CVCカテ講習会2026。掲示ポスターA3縦＋講義46枚、ポータル登録済。押坂先生は退職→名簿から外したまま確定
 - [高度心臓血管麻酔 Source Ledger](project-advanced-cv-anesthesia-ledger.md) — 210本の文献台帳。他AI提示の3資料が実在せず、1件は誤帰属
 - [Servier医学イラスト素材515点](project-servier-material-library.md) — 教育ファイル集\_素材 に抽出済みPNG＋台帳。麻酔器具だけは無料素材に存在しない
-- [Genspark実測台帳](project-genspark-capability-ledger.md) — 絵は描けない・組版はできる。無料枠はChat/Imageのみ2026-12-31まで
+- [Genspark実測台帳](project-genspark-capability-ledger.md) — 絵は描けない・組版はできる。無料枠はChat/Imageのみ2026-12-31まで。画像・文献検索は以後 AI Chat で（Super Agentは使わない）
 - [Gensparkは1返信に最大限の仕事](feedback-genspark-max-work-per-reply.md) — 1返信＝教材1本の全ジョブ。24番第2版＋_ツール_査読キット.pyで生成
 - [Gensparkにくろたん流を覚えさせる](workflow-genspark-kurotan-style.md) — 25番。カスタム指示(約780字)＋冒頭に貼る仕様書の2層。字数上限・効く範囲は未実測
 - [別冊・研修医版の番号引用化](workflow-companion-text-citations.md) — 短編10点を番号引用化(2026-09-22)。docx は OneDrive\_編集用原本（Word・PPT）配下。表のセルは tblhash.py
@@ -147,10 +108,11 @@
 - [ノルアドレナリン6頁テキスト](project-noradrenaline-5p-text.md) — 専攻医向け、NE1μg≒PE10〜13μg。研修医・専攻医向けテキストに配置、ポータルはⅠ-5循環管理(2026-10-07)
 - [周術期のポララミン 10頁＋4頁](project-polaramine-periop-text.md) — 専攻医向け、文献42/28件。ASCIA2026は6月版・RCUK周術期アルゴリズムに抗ヒ記載なし。ポータル登録済（アレルギー・アナフィラキシー対応）
 - [MBA必修4冊](project-mba-required-four-books.md) — 人材／マーケ・戦略基礎／経営戦略／リーダーシップと倫理（13〜18頁）。Genspark査読反映済。演習・点検表は不要の指示(2026-10-07)
+- [MBAファイナンスⅠ（中級）](project-mba-finance1-textbook.md) — 32頁・全12章・引用30件(2026-10-15)。架空A病院・C病院、数字は calc.py から自動。ポータルは14冊に（経営戦略・人材も各テーマへ）
+- [MBAアカウンティングⅠ（中級）](project-mba-accounting1-textbook.md) — 2026-10-15に2版：22頁・9章・引用12件版と33頁・12章・引用27件版（CF・TDABC入り）。正本は未決、ポータルに2冊並ぶ
 - [自動スクロール読書](project-auto-scroll-reader.md) — 自作ファイル集\自動スクロール読書.html。PDF/画像/テキストを手を使わず読む。続き位置を記憶(2026-10-07)
 - [麻酔科の人事異動](user-anesthesia-staff-changes.md) — 押坂先生は非常勤へ、常勤の後任は鈴木宏之先生(2026-10-07)
-- [教育ファイル集のフォルダ構成](project-education-folder-themes.md) — 大項目5つ→テーマ（ポータルの部）→話題のサブフォルダの3段(2026-10-07)。大項目名に分類語を入れない。SG15はスワンガンツ
-- [ステロイドホルモン 教科書〔53〕](project-steroid-textbook-53.md) — 本編54頁・引用99件＋専攻医版16頁（第一部が病態生理、症例なし）＋別冊『副腎とステロイド製剤』14頁。第V部アナフィラキシー、病態生理・薬理はPubMedで補強。Perplexityは文献の取り違えが3件
+- [教育ファイル集のフォルダ構成](project-education-folder-themes.md) — 2026-10-12にポータルと同じ 1_総論／2_各論／3_学会発表・手術室経営／ミニ教科書シリーズ に再編、テーマもポータル順の番号付き（空き番あり）。テーマ→話題のサブフォルダ。SG15はスワンガンツ
 - [教材は引用つき解説とコラムだけ](feedback-no-cases-or-quizzes.md) — 症例・問題・FAQ・自己評価・学習チェックリストは入れない(2026-10-07)
 - [既刊から症例・問題を削除(2026-10-07)](project-case-quiz-removal-2026-10.md) — 17文書を場面別解説に書き換え。元版は _症例削除前_20261007。生成スクリプトには症例が残る
 - [Word PDF出力は SaveAs2 で](env-word-export-saveas2.md) — ExportAsFixedFormat は固まる。%TEMP%経由で保存→上書きコピー（削除禁止ACL対策）
@@ -161,3 +123,18 @@
 - [術中に散発するVPC 詳細版＋専攻医版](project-intraop-vpc-lidocaine-atropine.md) — 9頁29件＋5頁25件、ポータルⅠ-5。他AI原案の「JCS 2024周術期GL」は存在しない
 - [成果物はデスクトップにも置く](feedback-deliverables-copy-to-desktop.md) — 元フォルダ＋デスクトップ直下の両方へ。デスクトップ側はJunkoが確認後にごみ箱へ（直下0ルールより優先）
 - [2台目PCへの移行キット](project-pc-migration-kit.md) — GitHub非公開kurotan-syncに記憶・設定・スクリプト、資料はOneDrive。新PCは自作ファイル集\PC移行キット\新PCセットアップ.bat、日々はsync.bat
+- [循環器ガイドラインの周術期抜粋](project-cardiology-guideline-periop-excerpt.md) — JCS系27本からSHD・補助循環・非心臓手術を7頁＋索引606節に（2026-10-11）。JCS2023_nishimuraはPCPS/ECMO/IMPELLAのFU
+- [JATS79 周術期ICI発表](project-jats79-perioperative-ici.md) — 2026-10-21胸部外科学会。RATS/VATSアップステージ＋術後アテゾ35例。文献台帳68本(4_論文と総説)
+- [自作テキスト168本の見やすさ調整](project-readability-pass-2026-10-12.md) — 書体メイリオ統一・本文10.5pt・表≥8.5pt・白紙頁削除。道具 readable_docx.py、作り直したら最後に通す(2026-10-12)
+- [NotebookLMは手元資料の照合係](workflow-notebooklm-grounded-check.md) — 画面名Gemini Notebook・PRO。質問テンプレはデスクトップのHTML。自分の文書を照合するときはそのチェックを外す
+- [オカレンスの重大分類は医療安全へ](feedback-occurrence-severe-to-safety-committee.md) — 術中心停止・死亡・大量出血等は手術室委員会資料に載せない
+- [デスクトップ単独ファイルの収納先(2026-10-13)](project-desktop-only-files-2026-10-13.md) — 星野演題スライド→学会発表・教育、オカレンス9月分→院内文書\医療安全、Book1→経営学\勉強ノート。Book2は開いていて未移動
+- [専攻医シーリング調査](project-senkoui-ceiling-survey.md) — 2026-10-14着。Genspark横断検索キット35番（厚労省部会／麻酔科学会／報道・東京・静岡）、回答は原本で照合
+- [術中の胃管と上部消化管出血 専攻医版](project-intraop-ng-tube-bleeding-text.md) — 8頁・引用26件(2026-10-14)。10_周術期医学・安全・チーム内。他AI原案の「Ilias K」は誤りで筆頭はSdralis
+- [TAVIの麻酔 研修医向け](project-tavi-anesthesia-resident-text.md) — 14頁・引用24件(2026-10-15)。2_各論\01_循環器の麻酔\TAVIの麻酔、ポータル登録済。略語は章ごと初出で英日正式名称を自動展開
+- [呼吸器外科の麻酔と呼吸生理 初期研修医向け](project-thoracic-resident-physiology-text.md) — 20頁・引用38件(2026-10-15)。〔52〕台帳を流用、ポータル登録済。題名が〔52〕と重ならない名前にする
+- [ガイドライン改訂トラッカー2024-2026](project-guideline-tracker-2024-2026.md) — xlsx98件＋既刊点検。2026 ACC/AHA周術期GLが出た（2024版と関係要確認）。JRC公式はjrc-cpr.org
+- [教材ボリュームアップ計画](project-volume-up-plan-20261016.md) — 148件をA/B/C分け。使える画像○1,153点の一覧xlsx（_素材）。優先A 27件・優先B 43件に写真挿入済(2026-10-17)、次は優先C。画像検索は以後Genspark AI Chat
+- [呼吸器外科・分離肺換気の5資料に実画像](project-thoracic-photos-20261016.md) — 写真13種（CC）を研修医版・⑱・〔52〕へ。Word PDF化は読み取り専用で開くと固まる
+- [硬膜外テキストに回旋・異所留置の2章を追記](project-epidural-rotation-addendum.md) — 46頁・文献50件・CC BY画像6点(2026-10-16)。腰椎回旋46.7%、CT位置異常12.7%。AI照合xlsxは_制作用
+- [気道管理の基本・脊髄くも膜下麻酔の基本 初期研修医向け](project-resident-texts-airway-spinal-20261015.md) — 13頁27件＋8頁19件＋輸液と循環作動薬8頁22件＋心臓手術の麻酔のはじめかた7頁17件(2026-10-15)。多AI分担：ChatGPTが最良、Geminiは不採用、Genspark SAの照合xlsxは未取り込み

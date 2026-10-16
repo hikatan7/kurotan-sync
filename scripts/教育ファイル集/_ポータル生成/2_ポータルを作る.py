@@ -179,13 +179,22 @@ tiles_aud = ('<div class="tile all" data-pick="aud"><span class="tn">すべて</
                     '<span class="tn">%s</span><span class="tc">%d</span></div>'
                     % (a, AUD_VAR[a], AUD_LABEL[a], n_aud.get(a, 0)) for a in AUD)
 
-tiles_thm = ('<div class="tile all" data-pick="thm"><span class="tn">すべてのテーマ</span>'
-             '<span class="tc">%d</span></div>' % len(items)) + \
-            "".join('<div class="tile%s" data-pick="thm" data-val="%s">'
-                    '<span class="tn">%s</span><span class="tc">%d</span></div>'
-                    % (" cpr" if t == book_toc.T_CPR else (" alg" if t == book_toc.T_ALLERGY else ""),
-                       t, t, n_thm[t])
-                    for t in themes)
+def _grp(t):
+    return book_toc.GROUP_OF.get(t, u"学会発表・手術室経営")
+
+
+_parts = ['<div class="tile all" data-pick="thm"><span class="tn">すべてのテーマ</span>'
+          '<span class="tc">%d</span></div>' % len(items)]
+_last = None
+for t in themes:
+    g = _grp(t)
+    if g != _last:
+        _parts.append('<div class="tgrp">%s</div>' % g)
+        _last = g
+    _parts.append('<div class="tile%s" data-pick="thm" data-val="%s">'
+                  '<span class="tn">%s</span><span class="tc">%d</span></div>'
+                  % (" cpr" if t == book_toc.T_CPR else "", t, t, n_thm[t]))
+tiles_thm = "".join(_parts)
 
 toc = [it for it in items if it.get("vol") == "00"]
 toc_files = toc[0]["roles"]["詳細版"] if toc else []

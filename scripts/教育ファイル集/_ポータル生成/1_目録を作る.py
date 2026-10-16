@@ -41,7 +41,9 @@ SKIP_DIR_KEYS = ["_編集用原本", "図版", "_重複", "引用済み", "統�
                  # まだテキスト／プレゼンにしていない一次資料の置き場
                  "_教材化待ち",
                  # 症例・問題を削除する前の控え（2026-10-08）。旧版としても載せない
-                 "_症例削除前", "_頁数制限解除前", "_文字拡大前", "_元_20261008"]
+                 "_症例削除前", "_頁数制限解除前", "_文字拡大前", "_元_20261008",
+                 # 素材・プロンプト・調査メモはポータルに載せない（2026-10-12、必要時にくろたんへ依頼）
+                 "_制作用"]
 # 患者データ・作業用ファイルは載せない
 SKIP_FILE_KEYS = ["患者オーダ情報", "オーダ情報_", "購入明細表", "~$"]
 SKIP_FILE_NAMES = ("麻酔資料ポータル.html", "portal_template.html", "portal_template.tpl",
@@ -170,6 +172,7 @@ TITLE_FIX = [
     (re.compile(r"_ガイドライン照合$"), ""),
     (re.compile(r"[（(](?:専攻医|研修医)(?:・研修医)?向け[)）]$"), ""),   # …（専攻医向け）
     (re.compile(r"[（(]$"), ""),                            # 削り残しの開き括弧
+    (re.compile(r"_抜粋$"), "（抜粋）"),                     # 循環器ガイドラインにみる周術期管理_抜粋
 ]
 
 
@@ -207,6 +210,7 @@ TOPIC_DIRS = {
     "マスターデータ2026年": "診療報酬マスターデータ 2026年",
     "心臓手術後の心停止（CALS）": "心臓手術後の心停止（CALS）── ICLS と何が違うか",
     "静脈・動脈ルート確保": "静脈・動脈ルート確保 ── 神経損傷・器材選択・静脈炎・動脈圧ライン",
+    "日本臨床麻酔学会2026_TEE消化管損傷（星野）": "術中TEEに関連する消化管損傷（星野演題・日本臨床麻酔学会2026）",
 }
 
 SERIES = "麻酔科ミニ教科書シリーズ"
@@ -404,11 +408,12 @@ ATTACH = [
     (r"^橈骨動脈穿刺_SourceLedger$", r"^橈骨動脈穿刺と動脈圧ライン確保"),
     (r"^硬膜外穿刺テキスト_SourceLedger$", r"^硬膜外穿刺とカテーテル挿入"),
     (r"^二十億回の拍動_SourceLedger$", r"^二十億回の拍動_サイズ"),
+    (r"^循環器ガイドライン_周術期記載の索引$", r"^循環器ガイドラインにみる周術期管理"),
 ]
 JUNIOR = [
     (r"^アルブミン製剤と輸血$", r"^血液製剤とアルブミン$"),
 ]
-MAKING = [r"^教材\d_", r"査読キット", r"^最初に貼る全文$", r"^本文_\d回目$", r"横断検索まとめ$", r"事例調査まとめ$"]
+MAKING = [r"^教材\d_", r"査読キット", r"^最初に貼る全文$", r"^本文_\d回目$", r"横断検索まとめ$", r"事例調査まとめ$", r"^他AI横断検索の回収と照合$", r"^検索作業まとめ$"]
 
 
 def _find(pat):
@@ -483,6 +488,10 @@ for it in out:
     if any(re.search(p, it["title"]) for p in MAKING):
         it["theme"], it["sub"] = book_toc.P99, u"制作用リスト"
 
+# 付録（素材ライブラリ・制作用リスト）はポータルから外す（2026-10-12）
+n_appendix = sum(1 for it in out if it["theme"] == book_toc.P99)
+out = [it for it in out if it["theme"] != book_toc.P99]
+
 dest = os.path.join(DESK, "教育ファイル集", "_portal_data.json")
 with open(dest, "w", encoding="utf-8") as f:
     json.dump(out, f, ensure_ascii=False, indent=1)
@@ -493,5 +502,6 @@ print("分野  :", dict(Counter(it["group"] for it in out)))
 print("対象者:", dict(Counter(a for it in out for a in it["audience"])))
 print("役割  :", dict(Counter(r for it in out for r in ROLES if it["roles"][r])))
 print("テーマ:", dict(Counter(it["theme"] for it in out)))
+print("付録として外した件数:", n_appendix)
 print("小項目なし:", sum(1 for it in out if not it["sub"]), "件")
 print("→", dest)
