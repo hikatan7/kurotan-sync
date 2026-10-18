@@ -92,7 +92,7 @@
 - [2026年度CVカテ講習会](project-cv-training-2026.md) — 教育ファイル集\CVCカテ講習会2026。掲示ポスターA3縦＋講義46枚、ポータル登録済。押坂先生は退職→名簿から外したまま確定
 - [高度心臓血管麻酔 Source Ledger](project-advanced-cv-anesthesia-ledger.md) — 210本の文献台帳。他AI提示の3資料が実在せず、1件は誤帰属
 - [Servier医学イラスト素材515点](project-servier-material-library.md) — 教育ファイル集\_素材 に抽出済みPNG＋台帳。麻酔器具だけは無料素材に存在しない
-- [Genspark実測台帳](project-genspark-capability-ledger.md) — 絵は描けない・組版はできる。無料枠はChat/Imageのみ2026-12-31まで。画像・文献検索は以後 AI Chat で（Super Agentは使わない）
+- [Genspark実測台帳](project-genspark-capability-ledger.md) — 絵は描けない・組版はできる。無料枠はChat/Imageのみ2026-12-31まで。画像・文献検索は AI Chat（無料）主体＋Super Agent（有料）も可、他AIも並行(2026-10-17)
 - [Gensparkは1返信に最大限の仕事](feedback-genspark-max-work-per-reply.md) — 1返信＝教材1本の全ジョブ。24番第2版＋_ツール_査読キット.pyで生成
 - [Gensparkにくろたん流を覚えさせる](workflow-genspark-kurotan-style.md) — 25番。カスタム指示(約780字)＋冒頭に貼る仕様書の2層。字数上限・効く範囲は未実測
 - [別冊・研修医版の番号引用化](workflow-companion-text-citations.md) — 短編10点を番号引用化(2026-09-22)。docx は OneDrive\_編集用原本（Word・PPT）配下。表のセルは tblhash.py
@@ -122,7 +122,7 @@
 - [高比重・等比重マーカインの用量 横断検索](project-marcain-baricity-dose-search.md) — Word10頁・引用28件＋出典xlsx。国内臨床成績のTh表が核。脊麻事故事例はGensparkキット34番で調査予定(2026-10-09)
 - [術中に散発するVPC 詳細版＋専攻医版](project-intraop-vpc-lidocaine-atropine.md) — 9頁29件＋5頁25件、ポータルⅠ-5。他AI原案の「JCS 2024周術期GL」は存在しない
 - [成果物はデスクトップにも置く](feedback-deliverables-copy-to-desktop.md) — 元フォルダ＋デスクトップ直下の両方へ。デスクトップ側はJunkoが確認後にごみ箱へ（直下0ルールより優先）
-- [2台目PCへの移行キット](project-pc-migration-kit.md) — GitHub非公開kurotan-syncに記憶・設定・スクリプト、資料はOneDrive。新PCは自作ファイル集\PC移行キット\新PCセットアップ.bat、日々はsync.bat
+- [2台目PCへの移行キット](project-pc-migration-kit.md) — GitHub非公開kurotan-syncに記憶・設定・スクリプト、資料はOneDrive。新PCは自作ファイル集\PC移行キット\新PCセットアップ.bat、日々はsync.bat。2026-10-17：新PCはshigeさんの物→junchアカウントで一時作業後、古いPCをメインに戻し新PCは片づける
 - [循環器ガイドラインの周術期抜粋](project-cardiology-guideline-periop-excerpt.md) — JCS系27本からSHD・補助循環・非心臓手術を7頁＋索引606節に（2026-10-11）。JCS2023_nishimuraはPCPS/ECMO/IMPELLAのFU
 - [JATS79 周術期ICI発表](project-jats79-perioperative-ici.md) — 2026-10-21胸部外科学会。RATS/VATSアップステージ＋術後アテゾ35例。文献台帳68本(4_論文と総説)
 - [自作テキスト168本の見やすさ調整](project-readability-pass-2026-10-12.md) — 書体メイリオ統一・本文10.5pt・表≥8.5pt・白紙頁削除。道具 readable_docx.py、作り直したら最後に通す(2026-10-12)
@@ -134,7 +134,9 @@
 - [TAVIの麻酔 研修医向け](project-tavi-anesthesia-resident-text.md) — 14頁・引用24件(2026-10-15)。2_各論\01_循環器の麻酔\TAVIの麻酔、ポータル登録済。略語は章ごと初出で英日正式名称を自動展開
 - [呼吸器外科の麻酔と呼吸生理 初期研修医向け](project-thoracic-resident-physiology-text.md) — 20頁・引用38件(2026-10-15)。〔52〕台帳を流用、ポータル登録済。題名が〔52〕と重ならない名前にする
 - [ガイドライン改訂トラッカー2024-2026](project-guideline-tracker-2024-2026.md) — xlsx98件＋既刊点検。2026 ACC/AHA周術期GLが出た（2024版と関係要確認）。JRC公式はjrc-cpr.org
-- [教材ボリュームアップ計画](project-volume-up-plan-20261016.md) — 148件をA/B/C分け。使える画像○1,153点の一覧xlsx（_素材）。優先A 27件・優先B 43件に写真挿入済(2026-10-17)、次は優先C。画像検索は以後Genspark AI Chat
+- [教材ボリュームアップ計画](project-volume-up-plan-20261016.md) — 148件をA/B/C分け。使える画像○1,460点の一覧xlsx（_素材）。優先A27・B43・C45件に写真挿入済(2026-10-17)、うち88件に新画像280枚を追加、○2,181。画像検索は以後Genspark AI Chat
 - [呼吸器外科・分離肺換気の5資料に実画像](project-thoracic-photos-20261016.md) — 写真13種（CC）を研修医版・⑱・〔52〕へ。Word PDF化は読み取り専用で開くと固まる
 - [硬膜外テキストに回旋・異所留置の2章を追記](project-epidural-rotation-addendum.md) — 46頁・文献50件・CC BY画像6点(2026-10-16)。腰椎回旋46.7%、CT位置異常12.7%。AI照合xlsxは_制作用
 - [気道管理の基本・脊髄くも膜下麻酔の基本 初期研修医向け](project-resident-texts-airway-spinal-20261015.md) — 13頁27件＋8頁19件＋輸液と循環作動薬8頁22件＋心臓手術の麻酔のはじめかた7頁17件(2026-10-15)。多AI分担：ChatGPTが最良、Geminiは不採用、Genspark SAの照合xlsxは未取り込み
+- [優先Cの写真挿入](project-volume-up-plan-20261017-c.md) — 45本に179枚で完了(2026-10-17)。対象外10本の理由、編集用原本との二重管理、HTMLのPDF化の注意
+- [Gensparkは無料AI Chatだけ](feedback-genspark-free-chat-only.md) — Super Agent（有料）は使わない(2026-10-18)。制限明けは新しいチャットで再送
