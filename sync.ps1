@@ -35,11 +35,11 @@ Get-ChildItem (Join-Path $Claude 'projects') -Directory -EA SilentlyContinue | F
     $m = Join-Path $_.FullName 'memory'
     if (Test-Path $m) { Robo $m (Join-Path $repoMem $_.Name) }
 }
-# 設定ファイル
-if (Test-Path (Join-Path $Repo 'claude\settings.json')) {
-    Robo (Join-Path $Repo 'claude') $Claude @('settings.json') @('/LEV:1')
+# 設定ファイル（CLAUDE.md＝どのフォルダでも効く「くろたん」の名乗りと記憶の索引）
+if (Test-Path (Join-Path $Repo 'claude')) {
+    Robo (Join-Path $Repo 'claude') $Claude @('settings.json', 'CLAUDE.md') @('/LEV:1')
 }
-Robo $Claude (Join-Path $Repo 'claude') @('settings.json') @('/LEV:1')
+Robo $Claude (Join-Path $Repo 'claude') @('settings.json', 'CLAUDE.md') @('/LEV:1')
 
 Step '3/4 自作スクリプトの控えを取る'
 if (Test-Path $Work) {
