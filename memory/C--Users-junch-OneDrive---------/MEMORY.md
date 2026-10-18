@@ -134,7 +134,7 @@
 - [TAVIの麻酔 研修医向け](project-tavi-anesthesia-resident-text.md) — 14頁・引用24件(2026-10-15)。2_各論\01_循環器の麻酔\TAVIの麻酔、ポータル登録済。略語は章ごと初出で英日正式名称を自動展開
 - [呼吸器外科の麻酔と呼吸生理 初期研修医向け](project-thoracic-resident-physiology-text.md) — 20頁・引用38件(2026-10-15)。〔52〕台帳を流用、ポータル登録済。題名が〔52〕と重ならない名前にする
 - [ガイドライン改訂トラッカー2024-2026](project-guideline-tracker-2024-2026.md) — xlsx98件＋既刊点検。2026 ACC/AHA周術期GLが出た（2024版と関係要確認）。JRC公式はjrc-cpr.org
-- [教材ボリュームアップ計画](project-volume-up-plan-20261016.md) — 148件をA/B/C分け。使える画像○1,460点の一覧xlsx（_素材）。優先A27・B43・C45件に写真挿入済(2026-10-17)、うち88件に新画像280枚を追加、○2,181。画像検索は以後Genspark AI Chat
+- [教材ボリュームアップ計画](project-volume-up-plan-20261016.md) — 148件をA/B/C分け。使える画像○1,460点の一覧xlsx（_素材）。優先A27・B43・C45件に写真挿入済(2026-10-17)、うち106件に新画像306枚を追加＋自己血レクチャーに写真スライド2枚、○2,181。画像検索は以後Genspark AI Chat
 - [呼吸器外科・分離肺換気の5資料に実画像](project-thoracic-photos-20261016.md) — 写真13種（CC）を研修医版・⑱・〔52〕へ。Word PDF化は読み取り専用で開くと固まる
 - [硬膜外テキストに回旋・異所留置の2章を追記](project-epidural-rotation-addendum.md) — 46頁・文献50件・CC BY画像6点(2026-10-16)。腰椎回旋46.7%、CT位置異常12.7%。AI照合xlsxは_制作用
 - [気道管理の基本・脊髄くも膜下麻酔の基本 初期研修医向け](project-resident-texts-airway-spinal-20261015.md) — 13頁27件＋8頁19件＋輸液と循環作動薬8頁22件＋心臓手術の麻酔のはじめかた7頁17件(2026-10-15)。多AI分担：ChatGPTが最良、Geminiは不採用、Genspark SAの照合xlsxは未取り込み

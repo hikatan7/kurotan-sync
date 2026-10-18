@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 6809e539-378e-4efe-a9a9-53a5bf82478c
-  modified: 2026-10-16T17:02:49.795Z
+  modified: 2026-10-18T05:19:18.189Z
 ---
 
 2026-10-11、Junko が2台目のパソコンを買って同じ作業をする準備を作った。
@@ -21,6 +21,8 @@ metadata:
 - 2026-10-17 方針変更：届いた新PCは shige さんのもの（既に shige アカウントあり）。junch アカウントを別に作って一時的に作業し、終わったら**古いPCをメインに戻す**。新PCからは「新PCで sync → 古いPCで sync → OneDrive同期完了を確認してリンク解除 → junch アカウントごと削除（Junko本人が操作）」で片づける。GitHub の認証取り消しと Microsoft アカウントのデバイス削除も勧めた。
 - 同日最終決定：shige さんのPCは初回起動の段階だったので、Windows 初期設定に junchink@gmail.com で入って使う（フォルダは C:\Users\junch になる想定）。返すときは Windows を「すべて削除」で初期化し、Microsoft アカウントのデバイス一覧から外して渡す。↓の「junch ローカルアカウントを別に作る」案は不要になった。
 - 同日さらに具体化：古いPCを**点検に出す間**、shige さんのPCに junch ローカルアカウントを作って作業し、点検から戻ったら古いPCへ戻して上記の片づけをする。Chrome は Google アカウントの同期で移す。点検前の時点で OneDrive の外にあるのは ダウンロード（403件・1.3GB）とデスクトップ直下の xlsx 1件だけ。
+- 2026-10-18 修理（点検）に出す前の処置：OneDrive 外のデータ（ダウンロード・.claude・kurotan-sync・AppData\Roaming・Chrome User Data・LINE など、キャッシュ除く約2万件）を `G:\マイドライブ\PCバックアップ_20261018`（Googleドライブ）へ robocopy した。失敗は使用中の Cookie 12件だけ。BitLocker は有効で、回復キーは Junko が保存済み。
+- 同日、もう一台のくろたんが他人行儀だった原因：記憶は会話を始めたフォルダごとにしまわれるので、別フォルダで始めると記憶ゼロになる。対策として `~/.claude/CLAUDE.md`（Junko／くろたんの呼び方＋この記憶の MEMORY.md を @import）を作り、sync.ps1 で settings.json と一緒に双方向同期するようにした。古い sync.ps1 のPCでは **sync.bat を2回** 実行すると入る。
 
 **Why:** Junko は2台のパソコンを完全に同じ環境で使いたい。
 **How to apply:** 記憶を書き換えたあとや作業の区切りには、sync.bat を実行するよう勧める。ユーザー名やパスが変わったら sync.ps1 と setup.ps1 を直す。関連：[[env-desktop-localized]] [[desktop-path-change-2026-09-12]]
